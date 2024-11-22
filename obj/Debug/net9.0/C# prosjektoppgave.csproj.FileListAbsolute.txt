@@ -1,0 +1,14 @@
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/bin/Debug/net9.0/C# prosjektoppgave
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/bin/Debug/net9.0/C# prosjektoppgave.deps.json
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/bin/Debug/net9.0/C# prosjektoppgave.runtimeconfig.json
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/bin/Debug/net9.0/C# prosjektoppgave.dll
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/bin/Debug/net9.0/C# prosjektoppgave.pdb
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/obj/Debug/net9.0/C# prosjektoppgave.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/obj/Debug/net9.0/C# prosjektoppgave.AssemblyInfoInputs.cache
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/obj/Debug/net9.0/C# prosjektoppgave.AssemblyInfo.cs
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/obj/Debug/net9.0/C# prosjektoppgave.csproj.CoreCompileInputs.cache
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/obj/Debug/net9.0/C# prosjektoppgave.dll
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/obj/Debug/net9.0/refint/C# prosjektoppgave.dll
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/obj/Debug/net9.0/C# prosjektoppgave.pdb
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/obj/Debug/net9.0/C# prosjektoppgave.genruntimeconfig.cache
+/Users/Sigrid/Documents/C#/C# prosjektoppgave/obj/Debug/net9.0/ref/C# prosjektoppgave.dll
