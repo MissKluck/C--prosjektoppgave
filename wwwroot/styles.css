@@ -1,3 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* basic styling */
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  background-color: lightblue;
+}
+
+header {
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Boxes design*/
 .box {
   width: 300px;
   height: 350px;
@@ -5,4 +41,5 @@
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
+  box-shadow: 7px 7px cornflowerblue;
 }
