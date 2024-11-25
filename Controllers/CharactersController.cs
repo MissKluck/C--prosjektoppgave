@@ -6,6 +6,8 @@ namespace C__prosjektoppgave;
 
 public class CharactersController : ControllerBase
 {
+    private readonly GhibliGirlsDb _context;
+
     private static List<Characters> characters = new List<Characters>{
         new Characters {Id = 1, Name = "Chihiro", Age = 10, Film = "Spirited Away", About = "Chihiro is the main character of the movie Spirited Away. She and her parents ends up walking into the spirit world, and she has to work for the witch Yubaba in order to save her parents who were turned into pigs."},
         new Characters {Id = 2, Name = "San", Age = 17, Film = "Princess Mononoke", About = "San is one of the main characters of Princess Mononoke, and the one the movie is named after. She was raised by wolves in the forest, and works together with them and Ashitaka, the other main character, to try and save the forest and the spirit God."},
@@ -14,6 +16,16 @@ public class CharactersController : ControllerBase
         new Characters {Id = 5, Name = "Nausicaä", Age = 16, Film = "Nausicaä of the Valley of the Wind", About = "lorem ipsum"},
         new Characters {Id = 6, Name = "Umi", Age = 16, Film = "From up on Poppy Hill", About = "lorem ipsum"}
     };
+
+    public CharactersController(GhibliGirlsDb context)
+    {
+        _context = context;
+        if (!_context.Characters.Any())
+        {
+            _context.Characters.AddRange(characters);
+            _context.SaveChanges();
+        }
+    }
 
     // create the GET endpoint
     [HttpGet]
@@ -26,11 +38,13 @@ public class CharactersController : ControllerBase
     [HttpPost]
     public IActionResult Post([FromBody] Characters _characters)
     {
-        if (_characters == null)
+        if (characters == null)
         {
             return BadRequest("Client error occured!");
         }
-        characters.Add(_characters);
+        _context.Add(_characters);
+        _context.SaveChanges();
+        //characters.Add(_characters);
         return CreatedAtAction(nameof(Post), new
         {
             Id = _characters.Id,
