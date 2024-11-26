@@ -25,5 +25,5 @@ checkapi(response);
 
 // Create the boxes
 //function BoxCreators() {
-    for (let i = 0; i < )
+//   for (let i = 0; i < )
 //}
