@@ -6,19 +6,10 @@ namespace C__prosjektoppgave;
 [ApiController]
 [Route("api/characters")]
 
-public class _CharactersController : ControllerBase
+public class CharactersController : ControllerBase
 {
     private readonly AppDbContext _context;
 
-    public _CharactersController(AppDbContext context)
-    {
-        _context = context;
-        if (!_context.Characters.Any())
-        {
-            _context.Characters.Add(new Characters { Id = 6, Name = "Umi", Age = 16, Film = "From up on Poppy Hill", About = "lorem ipsum" });
-            _context.SaveChanges();
-        }
-    }
     private static List<Characters> characters = new List<Characters>{
         new Characters {Id = 1, Name = "Chihiro", Age = 10, Film = "Spirited Away", About = "A young girl who just had to move from all her friends, Chihiro is timid and scared when she and her parents end up visiting the spirit world on accident. When her parents are turned into pigs, Chihiro has to find her own courage in order to save them, and ends up reconnecting with an old friend along the way."},
         new Characters {Id = 2, Name = "San", Age = 17, Film = "Princess Mononoke", About = "San is a young woman who was raised by the wolves and fights alongside them to protect the forest. Initially rejecting her own humanity, she comes to appreciate it while working alongside Ashitaka to save the forest spirit."},
@@ -26,6 +17,16 @@ public class _CharactersController : ControllerBase
         new Characters {Id = 4, Name = "Sheeta", Age = 13, Film = "Laputa: Castle In The Sky", About = "Sheeta is unknowingly the last heir to the throne of a kingdom floating in the sky named Laputa. Escaping from the government, she works together with both Pazu and a band of air pirates in order to save both herself and what is left of her kingdom from falling into the wrong hands."},
         new Characters {Id = 5, Name = "Nausicaä", Age = 16, Film = "Nausicaä of the Valley of the Wind", About = "Nausicaä is known as the princess who loves insects, a remarkable trait for someone growing up in a polluted world where insects are one of the great dangers. She works to find a cure to the miasma poison which many of her people suffer from, and becomes entangled in a war between humans and animals in the process. "}
     };
+
+    public CharactersController(AppDbContext context)
+    {
+        _context = context;
+        if (!_context.Characters.Any())
+        {
+            _context.Characters.AddRange(characters);
+            _context.SaveChanges();
+        }
+    }
 
     // create the GET endpoint
     [HttpGet]
