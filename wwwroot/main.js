@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', (async) => {
   async function fetchCharacters() {
     try {
-      const result = await fetch('api/characters');
+      const result = await fetch('http://localhost:5230/api/characters');
 
       // throws an error if the server doesn't work
       if (!result.ok) {
