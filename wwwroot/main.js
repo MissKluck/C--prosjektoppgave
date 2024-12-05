@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', (async) => {
         box.className = 'box';
 
         box.innerHTML = `
-        <img src="${character.image}" alt="${character.name}" />
+        <img src="${character.ImageUrl}" alt="${character.name}" />
         <p class="text"><strong>${character.name}</strong></p>
         <p>${character.about}</p>
         <p><em>Film: ${character.film}, Age: ${character.age}</em></p>
