@@ -17,6 +17,17 @@ public class Program
         builder.Services.AddSwaggerGen();
         builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddDefaultPolicy(builder =>
+            {
+                builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
+        });
+
+
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -31,6 +42,8 @@ public class Program
         app.UseStaticFiles();
 
         // app.UseHttpsRedirection();
+
+        app.UseCors();
 
         app.UseAuthorization();
 
