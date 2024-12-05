@@ -1,3 +1,4 @@
+//waits until the html is fully loaded before executing the function
 document.addEventListener('DOMContentLoaded', (async) => {
   async function fetchCharacters() {
     try {
