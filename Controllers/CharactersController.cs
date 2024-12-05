@@ -52,7 +52,8 @@ public class CharactersController : ControllerBase
             Name = characters.Name,
             Age = characters.Age,
             Film = characters.Film,
-            About = characters.About
+            About = characters.About,
+            ImageUrl = characters.ImageUrl
         }, characters);
     }
 
