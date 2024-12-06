@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', (async) => {
 
       // convert from JSON to Javascript Object
       const characters = await result.json();
+      console.log(characters);
 
       // find the element in html where the data is to be implemented
       const container = document.getElementById('char-container');
@@ -22,7 +23,6 @@ document.addEventListener('DOMContentLoaded', (async) => {
       characters.forEach((character) => {
         const box = document.createElement('li');
         box.className = 'box';
-
         box.innerHTML = `
         <img src="${character.ImageUrl}" alt="${character.name}" />
         <p class="text"><strong>${character.name}</strong></p>
@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', (async) => {
       // if an error occurs, the html is set to an error message
     } catch (error) {
       console.error('Error fetching characters:', error);
-      const container = document.getElementById('char-container');
-      container.innerHTML = '<p>Failed to load characters</p>';
+      const container = (document.getElementById('char-container').innerHTML =
+        '<p>Failed to load characters</p>');
     }
   }
 
