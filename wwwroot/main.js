@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', (async) => {
 
       // convert from JSON to Javascript Object
       const characters = await result.json();
-      console.log(characters);
 
       // find the element in html where the data is to be implemented
       const container = document.getElementById('char-container');
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', (async) => {
         const box = document.createElement('li');
         box.className = 'box';
         box.innerHTML = `
-        <img src="${character.ImageUrl}" alt="${character.name}" />
+        <img src="${character.imageUrl}" alt="${character.name}" />
         <p class="text"><strong>${character.name}</strong></p>
         <p>${character.about}</p>
         <p><em>Film: ${character.film}, Age: ${character.age}</em></p>
