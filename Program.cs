@@ -30,7 +30,6 @@ public class Program
             });
         });
 
-
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -41,6 +40,12 @@ public class Program
         }
 
         app.UseDefaultFiles();
+
+        app.UseCors(policy =>
+        policy.WithOrigins("http://localhost:5500") // Allow requests from the frontend
+          .AllowAnyHeader()
+          .AllowAnyMethod());
+
 
         app.UseStaticFiles();
 
